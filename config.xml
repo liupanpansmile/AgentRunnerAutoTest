@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config>
+	<!-- agent runner 运行 result的路径 -->
+    <resultPath>D:\work\firefox-agent\agent_runner_0629_02\result\</resultPath>
+
+	<!-- 设置检查result目录下result数据是否增加的频率，单位millsecond -->
+	<checkFrequency>1000</checkFrequency>
+	<resultReportPath>D:\result.txt</resultReportPath>
+	<processConfig>
+
+		<!-- 进程所在地址（生成脚本） -->
+		<processAddress>java</processAddress>
+		<!-- 参数以空格隔开 -->
+		<cmdLine>-jar F:\JavaTestCode\FormOSLScript\FormOSLScript.jar</cmdLine>
+		<!-- 进程工作路径 -->
+		<workDirectory>F:\JavaTestCode\FormOSLScript\</workDirectory>
+	</processConfig>
+</config>

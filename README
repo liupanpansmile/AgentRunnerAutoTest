@@ -1,0 +1,5 @@
+Date：		2015/07/07
+Author:		lpp
+Version:    v1.0.0
+Purpose：	统计runner的result中是否同一Job执行返回多个result的情况、及job执行返回异常的result格式(xml)、正常返回的情况的比率
+Unfinished: 未显示同一Job返回多个result的文件名
