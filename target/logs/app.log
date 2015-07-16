@@ -1,0 +1,9 @@
+2015-07-16 at 13:18:07 CST INFO  oneapm.synthetic.agent.test.config.Configuration 32 readConfig - ---readConfig---
+2015-07-16 at 13:18:07 CST INFO  oneapm.synthetic.agent.test.result.MainClass 41 checkResultReady - scanRunnerResultThread join
+2015-07-16 at 13:19:08 CST INFO  oneapm.synthetic.agent.test.result.MainClass 131 main - execute end..........
+2015-07-16 at 13:19:41 CST INFO  oneapm.synthetic.agent.test.config.Configuration 32 readConfig - ---readConfig---
+2015-07-16 at 13:19:41 CST INFO  oneapm.synthetic.agent.test.result.MainClass 41 checkResultReady - scanRunnerResultThread join
+2015-07-16 at 13:20:26 CST INFO  oneapm.synthetic.agent.test.result.MainClass 131 main - execute end..........
+2015-07-16 at 13:23:34 CST INFO  oneapm.synthetic.agent.test.config.Configuration 32 readConfig - ---readConfig---
+2015-07-16 at 13:23:34 CST INFO  oneapm.synthetic.agent.test.result.MainClass 41 checkResultReady - scanRunnerResultThread join
+2015-07-16 at 13:27:04 CST INFO  oneapm.synthetic.agent.test.result.MainClass 131 main - execute end..........

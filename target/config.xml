@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config>
+    <resultPath>D:\work\firefox-agent\agent_runner_0629_02\result\</resultPath>    
+    <checkFrequency>30000</checkFrequency>
+    <resultReportPath>D:\</resultReportPath>
+    <scriptConfig>
+        <templateFilename>F:\JavaTestCode\FormOSLScript\script\template\demo.template.osl</templateFilename>
+        <destFilePath>D:\work\firefox-agent\agent_runner_0629_02\job\</destFilePath>
+        <scriptCount>100</scriptCount>
+    </scriptConfig>
+    <agentRunnerConfig>
+        <doRegress>true</doRegress>
+        <poolSizeMin>4</poolSizeMin>
+        <poolSizeMax>6</poolSizeMax>
+        <configFilePath>D:\work\firefox-agent\agent_runner_0629_02\runner\config.xml</configFilePath>
+        <pidFile>D:\work\firefox-agent\agent_runner_0629_02\runner\pid.log</pidFile>
+    </agentRunnerConfig>
+</config>
