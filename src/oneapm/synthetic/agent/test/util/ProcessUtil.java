@@ -18,7 +18,7 @@ public class ProcessUtil {
 		logger.info("generate script end...");
 		// split cmd by space
 		String[] cmds = cmdLine.split(" ") ;
-		List<String> cmdList = new ArrayList() ;
+		List<String> cmdList = new ArrayList<String>() ;
 		cmdList.add(processAddress) ;
 		cmdList.addAll(Arrays.asList(cmds)) ;
 		
@@ -39,4 +39,16 @@ public class ProcessUtil {
 		}
 		logger.info("generate script end...");
 	}
+	
+	
+	
+	 public static void killProcessByPID(Long processId) {
+	        List<String> cmds = new ArrayList<String>();
+	        cmds.add("TASKKILL");
+	        cmds.add("-F");
+	        cmds.add("/PID");
+	        cmds.add(processId.toString());
+	        cmds.add("-T");
+	        ExecCmdUtil.executeCommand(cmds);
+	    }
 }

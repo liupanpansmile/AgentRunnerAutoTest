@@ -2,8 +2,11 @@ package oneapm.synthetic.agent.test.config ;
 
 
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.logging.log4j.LogManager;
@@ -37,7 +40,7 @@ public class XMLUtil {
         } catch (Exception e) {
             throw new Exception("read File {" + filePath + "} error!", e);
         }
-
+       
         XStream xstream = new XStream(new DomDriver());
         xstream.processAnnotations(cls);
         T obj;
@@ -49,5 +52,30 @@ public class XMLUtil {
         ins.close();
         return obj;
     }
+    
+    public static <T> void toFileFromBean(String  filename,T obj, Class<T> cls) {
+    	XStream xstream = new XStream() ;
+    	xstream.processAnnotations(cls);
+    	String xmlString = xstream.toXML(obj) ;
+    	writeFile(filename, xmlString);
+    }
+    
+    private static void writeFile(String filename,String xmlString){
+    	BufferedWriter out = null;
+		try {
+			out = new BufferedWriter(new FileWriter(filename));
+			out.write(xmlString);
+		} catch (IOException e) {
+			logger.error("IOException Occured" + e.getMessage());
+		} finally {
+			try {
+				if (out != null)
+					out.close();
+			} catch (IOException e) {
+				logger.error("IOException Occured" + e.getMessage());
+			}
+		}
+    }
+    
 }
 

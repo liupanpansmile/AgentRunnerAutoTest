@@ -28,7 +28,8 @@ public class ScanRunnerResultThread implements Runnable {
 		int newFileNum  ;
 		while(true){
 			try {
-				Thread.sleep(checkFrequency); 
+				Thread.sleep(checkFrequency/2);
+				//this.wait(checkFrequency/2);
 				if((newFileNum = countResultFileNumner(resultPath)) > oldFileNum){
 					oldFileNum = newFileNum ;
 					continue ;
@@ -39,6 +40,7 @@ public class ScanRunnerResultThread implements Runnable {
 				e.printStackTrace();
 			}
 		}
+		
 		
 	}
 
@@ -53,4 +55,6 @@ public class ScanRunnerResultThread implements Runnable {
 		File file = new File(resultPath) ;
 		return file.listFiles().length ;
 	} 
+	
+
 }
